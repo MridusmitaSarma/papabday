@@ -619,7 +619,7 @@ function Blessings() {
               </svg>
             </div>
             <div className="blessing-frame">
-              <image-slot id={b.id} shape="circle" fit="cover" src={b.src}
+              <image-slot id={b.id} shape="circle" fit="contain" src={b.src}
                 placeholder={b.src}
                 style={{ display: "block", width: "100%", aspectRatio: "1/1", background: "#1a1d28" }}></image-slot>
             </div>
@@ -759,10 +759,10 @@ function App() {
             place={FATHER.birthplace}
           />
         </div>
-        <PortraitBlock />
         <div id="sky">
           <StarMap date="24 MAY 1970" name={FATHER.name.toUpperCase()} place={FATHER.birthplace.toUpperCase()} />
         </div>
+        <PortraitBlock />
         <AudioMessages />
         <FamilyAlbum />
         <Blessings />

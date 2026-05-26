@@ -236,12 +236,12 @@ html[data-palette="cream"] .app::before { opacity: 0.10; mix-blend-mode: multipl
 /* ── Portrait + Quote ─────────────────────────────────────────────────── */
 .portrait-row {
   display: grid;
-  grid-template-columns: minmax(360px, 1.1fr) 0.9fr;
-  gap: clamp(40px, 6vw, 100px);
+  grid-template-columns: minmax(280px, 0.9fr) 1fr;
+  gap: clamp(40px, 6vw, 80px);
   align-items: center;
-  max-width: var(--maxw);
+  max-width: 980px;
   margin: 0 auto;
-  padding: clamp(80px, 12vw, 160px) var(--gutter);
+  padding: clamp(60px, 8vw, 100px) var(--gutter);
 }
 .portrait-frame {
   position: relative;
@@ -976,7 +976,16 @@ html[data-palette="cream"] .audio-fallback code { background: rgba(0,0,0,0.06); 
 .blessings {
   max-width: var(--maxw);
   margin: 0 auto;
-  padding: clamp(80px, 10vw, 140px) var(--gutter);
+  padding: clamp(100px, 14vw, 180px) var(--gutter) clamp(80px, 10vw, 120px);
+  position: relative;
+}
+.blessings::before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: clamp(40px, 6vw, 80px);
+  background: var(--c-border);
+  margin: 0 auto clamp(40px, 6vw, 80px);
 }
 .blessings-row {
   display: grid;
@@ -1008,7 +1017,7 @@ html[data-palette="cream"] .audio-fallback code { background: rgba(0,0,0,0.06); 
 .blessing-frame {
   position: relative;
   z-index: 1;
-  width: min(180px, 60vw);
+  width: min(220px, 70vw);
   padding: 4px;
   border-radius: 50%;
   background: linear-gradient(135deg,
@@ -1026,10 +1035,9 @@ html[data-palette="cream"] .blessing-frame {
   background: var(--c-soft);
   display: block;
 }
-/* Zoom the inner image 10% — fits face better in the circular halo. */
+/* Whole photo must show — everyone's face visible. No zoom, no crop. */
 .blessing-frame image-slot img {
-  transform: scale(1.10);
-  transform-origin: center center;
+  transform: none;
 }
 .blessing figcaption {
   position: relative;
@@ -1570,7 +1578,7 @@ html[data-palette="cream"] .gift-card-front {
 .starmap-section {
   max-width: var(--maxw);
   margin: 0 auto;
-  padding: clamp(80px, 10vw, 140px) var(--gutter);
+  padding: clamp(80px, 10vw, 140px) var(--gutter) clamp(120px, 14vw, 180px);
 }
 .starmap-wrap {
   display: flex;
@@ -1679,7 +1687,7 @@ html[data-palette="cream"] .gift-card-front {
   .site-nav { display: none; }
   .site-hd-date { font-size: 10px; }
   .portrait-row { grid-template-columns: 1fr; }
-  .portrait-frame { width: 100%; max-width: 480px; margin: 0 auto; transform: rotate(-1deg); }
+  .portrait-frame { width: 100%; max-width: 280px; margin: 0 auto; transform: rotate(-1deg); }
   .hero-meta { flex-wrap: wrap; gap: 16px 24px; }
   .hero-meta-divider { display: none; }
   .hero-scroll { display: none; }
