@@ -102,7 +102,7 @@ const AUDIO = [
 
 // People who are gone but still bless us — 1 frame.
 const BLESSINGS = [
-  { id: "blessing-1", name: "in loving memory", src: "photos/aitama.jpg" },
+  { id: "blessing-1", name: "in loving memory", src: "photos/ataaitama.jpg" },
 ];
 
 // ─── Palettes ───────────────────────────────────────────────────────────────
@@ -398,10 +398,10 @@ function PortraitBlock() {
     <section className="portrait-row" data-screen-label="02 Portrait">
       <div className="portrait-frame">
         <div className="portrait-img">
-          <image-slot id="papa-portrait" shape="rect"
-            src="photos/happyphoto.jpg"
-            placeholder="photos/happyphoto.jpg"
-            style={{ display: "block", width: "100%", aspectRatio: "4/5" }}></image-slot>
+          <image-slot id="papa-portrait" shape="rect" fit="contain"
+            src="photos/family.jpg"
+            placeholder="photos/family.jpg"
+            style={{ display: "block", width: "100%", aspectRatio: "4/5", background: "#0f1118" }}></image-slot>
           <span className="portrait-tag">№ 01 · the man himself</span>
         </div>
       </div>
@@ -579,15 +579,15 @@ function FamilyAlbum() {
         sub="Drop your favourites in. Tap a slot from your phone to pick a photo from your gallery."
       />
       <div className="photo-strip three">
-        <image-slot id="papa-photo-1" shape="rect" src="photos/old photo.jpg"
+        <image-slot id="papa-photo-1" shape="rect" fit="contain" src="photos/old photo.jpg"
           placeholder="photos/old photo.jpg"
-          style={{ display: "block", width: "100%", aspectRatio: "3/4" }}></image-slot>
-        <image-slot id="papa-photo-2" shape="rect" src="photos/last photo.jpg"
+          style={{ display: "block", width: "100%", aspectRatio: "3/4", background: "#0f1118" }}></image-slot>
+        <image-slot id="papa-photo-2" shape="rect" fit="contain" src="photos/last photo.jpg"
           placeholder="photos/last photo.jpg"
-          style={{ display: "block", width: "100%", aspectRatio: "3/4" }}></image-slot>
-        <image-slot id="papa-photo-3" shape="rect" src="photos/happyphoto.jpg"
+          style={{ display: "block", width: "100%", aspectRatio: "3/4", background: "#0f1118" }}></image-slot>
+        <image-slot id="papa-photo-3" shape="rect" fit="contain" src="photos/happyphoto.jpg"
           placeholder="photos/happyphoto.jpg"
-          style={{ display: "block", width: "100%", aspectRatio: "3/4" }}></image-slot>
+          style={{ display: "block", width: "100%", aspectRatio: "3/4", background: "#0f1118" }}></image-slot>
       </div>
     </section>
   );
@@ -619,9 +619,9 @@ function Blessings() {
               </svg>
             </div>
             <div className="blessing-frame">
-              <image-slot id={b.id} shape="circle" src={b.src}
+              <image-slot id={b.id} shape="circle" fit="cover" src={b.src}
                 placeholder={b.src}
-                style={{ display: "block", width: "100%", aspectRatio: "1/1" }}></image-slot>
+                style={{ display: "block", width: "100%", aspectRatio: "1/1", background: "#1a1d28" }}></image-slot>
             </div>
             <figcaption>{b.name}</figcaption>
           </figure>

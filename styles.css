@@ -236,7 +236,7 @@ html[data-palette="cream"] .app::before { opacity: 0.10; mix-blend-mode: multipl
 /* ── Portrait + Quote ─────────────────────────────────────────────────── */
 .portrait-row {
   display: grid;
-  grid-template-columns: minmax(280px, 0.85fr) 1.15fr;
+  grid-template-columns: minmax(360px, 1.1fr) 0.9fr;
   gap: clamp(40px, 6vw, 100px);
   align-items: center;
   max-width: var(--maxw);
@@ -1026,6 +1026,11 @@ html[data-palette="cream"] .blessing-frame {
   background: var(--c-soft);
   display: block;
 }
+/* Zoom the inner image 10% — fits face better in the circular halo. */
+.blessing-frame image-slot img {
+  transform: scale(1.10);
+  transform-origin: center center;
+}
 .blessing figcaption {
   position: relative;
   z-index: 1;
@@ -1674,7 +1679,7 @@ html[data-palette="cream"] .gift-card-front {
   .site-nav { display: none; }
   .site-hd-date { font-size: 10px; }
   .portrait-row { grid-template-columns: 1fr; }
-  .portrait-frame { width: 100%; max-width: 360px; margin: 0 auto; transform: rotate(-1deg); }
+  .portrait-frame { width: 100%; max-width: 480px; margin: 0 auto; transform: rotate(-1deg); }
   .hero-meta { flex-wrap: wrap; gap: 16px 24px; }
   .hero-meta-divider { display: none; }
   .hero-scroll { display: none; }
